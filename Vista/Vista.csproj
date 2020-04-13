@@ -74,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="VentanaDetalle.resx">
       <DependentUpon>VentanaDetalle.cs</DependentUpon>
@@ -98,13 +99,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img\" />
+    <None Include="img\btnEliminar.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{F486F8BB-106E-4E02-AA8D-12A8125F9107}</Project>
       <Name>Modelo</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\btnSalirVolver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\btnDetalle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\btnModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\btnNuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\btnAceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\btnCargarImagen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

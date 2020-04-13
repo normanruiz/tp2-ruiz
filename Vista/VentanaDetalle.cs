@@ -40,5 +40,9 @@ namespace Vista
 
         }
 
+        private void lblDEscripcion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

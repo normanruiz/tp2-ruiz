@@ -1,0 +1,15 @@
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.csprojAssemblyReference.cache
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.VentanaPrincipal.resources
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\bin\Debug\Vista.exe.config
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\bin\Debug\Vista.exe
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\bin\Debug\Vista.pdb
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.exe
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.pdb
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\bin\Debug\Modelo.dll
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\bin\Debug\Modelo.pdb
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.VentanaDetalle.resources
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.VentanaNuevoModificar.resources
+C:\Users\Norman Ruiz\source\repos\TP2_Ruiz\Vista\obj\Debug\Vista.csproj.CopyComplete

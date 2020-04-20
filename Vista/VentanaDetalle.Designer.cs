@@ -32,11 +32,6 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.lblEtiquetaTitulo = new System.Windows.Forms.Label();
-            this.lblEtiquetaCodigo = new System.Windows.Forms.Label();
-            this.lblEtiquetaNombre = new System.Windows.Forms.Label();
-            this.lblEtiquetaDescripcion = new System.Windows.Forms.Label();
-            this.lblEtiquetaMarca = new System.Windows.Forms.Label();
-            this.lblEtiquetaCategoria = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -44,7 +39,17 @@
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.ptbImagen = new System.Windows.Forms.PictureBox();
+            this.gpbCodigo = new System.Windows.Forms.GroupBox();
+            this.gpbNombre = new System.Windows.Forms.GroupBox();
+            this.gpbMarca = new System.Windows.Forms.GroupBox();
+            this.gpbCategoria = new System.Windows.Forms.GroupBox();
+            this.gpbDescripcion = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
+            this.gpbCodigo.SuspendLayout();
+            this.gpbNombre.SuspendLayout();
+            this.gpbMarca.SuspendLayout();
+            this.gpbCategoria.SuspendLayout();
+            this.gpbDescripcion.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -64,7 +69,7 @@
             this.btnModificar.BackgroundImage = global::Vista.Properties.Resources.btnModificar;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModificar.Location = new System.Drawing.Point(65, 420);
+            this.btnModificar.Location = new System.Drawing.Point(97, 422);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(60, 60);
             this.btnModificar.TabIndex = 1;
@@ -81,70 +86,20 @@
             this.lblEtiquetaTitulo.TabIndex = 2;
             this.lblEtiquetaTitulo.Text = "Detalle de articulo";
             // 
-            // lblEtiquetaCodigo
-            // 
-            this.lblEtiquetaCodigo.AutoSize = true;
-            this.lblEtiquetaCodigo.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtiquetaCodigo.Location = new System.Drawing.Point(62, 94);
-            this.lblEtiquetaCodigo.Name = "lblEtiquetaCodigo";
-            this.lblEtiquetaCodigo.Size = new System.Drawing.Size(54, 18);
-            this.lblEtiquetaCodigo.TabIndex = 3;
-            this.lblEtiquetaCodigo.Text = "Codigo";
-            // 
-            // lblEtiquetaNombre
-            // 
-            this.lblEtiquetaNombre.AutoSize = true;
-            this.lblEtiquetaNombre.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtiquetaNombre.Location = new System.Drawing.Point(62, 162);
-            this.lblEtiquetaNombre.Name = "lblEtiquetaNombre";
-            this.lblEtiquetaNombre.Size = new System.Drawing.Size(59, 18);
-            this.lblEtiquetaNombre.TabIndex = 4;
-            this.lblEtiquetaNombre.Text = "Nombre";
-            // 
-            // lblEtiquetaDescripcion
-            // 
-            this.lblEtiquetaDescripcion.AutoSize = true;
-            this.lblEtiquetaDescripcion.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtiquetaDescripcion.Location = new System.Drawing.Point(379, 358);
-            this.lblEtiquetaDescripcion.Name = "lblEtiquetaDescripcion";
-            this.lblEtiquetaDescripcion.Size = new System.Drawing.Size(77, 17);
-            this.lblEtiquetaDescripcion.TabIndex = 5;
-            this.lblEtiquetaDescripcion.Text = "Descripcion";
-            // 
-            // lblEtiquetaMarca
-            // 
-            this.lblEtiquetaMarca.AutoSize = true;
-            this.lblEtiquetaMarca.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtiquetaMarca.Location = new System.Drawing.Point(62, 230);
-            this.lblEtiquetaMarca.Name = "lblEtiquetaMarca";
-            this.lblEtiquetaMarca.Size = new System.Drawing.Size(50, 18);
-            this.lblEtiquetaMarca.TabIndex = 6;
-            this.lblEtiquetaMarca.Text = "Marca";
-            // 
-            // lblEtiquetaCategoria
-            // 
-            this.lblEtiquetaCategoria.AutoSize = true;
-            this.lblEtiquetaCategoria.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtiquetaCategoria.Location = new System.Drawing.Point(62, 298);
-            this.lblEtiquetaCategoria.Name = "lblEtiquetaCategoria";
-            this.lblEtiquetaCategoria.Size = new System.Drawing.Size(71, 18);
-            this.lblEtiquetaCategoria.TabIndex = 7;
-            this.lblEtiquetaCategoria.Text = "Categoria";
-            // 
             // lblPrecio
             // 
-            this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(387, 316);
+            this.lblPrecio.Location = new System.Drawing.Point(307, 316);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(0, 23);
+            this.lblPrecio.Size = new System.Drawing.Size(315, 23);
             this.lblPrecio.TabIndex = 8;
+            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(62, 128);
+            this.lblCodigo.Location = new System.Drawing.Point(28, 23);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(0, 18);
             this.lblCodigo.TabIndex = 9;
@@ -153,7 +108,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(62, 196);
+            this.lblNombre.Location = new System.Drawing.Point(28, 23);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(0, 18);
             this.lblNombre.TabIndex = 10;
@@ -161,17 +116,17 @@
             // lblDEscripcion
             // 
             this.lblDEscripcion.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDEscripcion.Location = new System.Drawing.Point(197, 394);
+            this.lblDEscripcion.Location = new System.Drawing.Point(20, 24);
             this.lblDEscripcion.Name = "lblDEscripcion";
-            this.lblDEscripcion.Size = new System.Drawing.Size(441, 112);
+            this.lblDEscripcion.Size = new System.Drawing.Size(368, 105);
             this.lblDEscripcion.TabIndex = 11;
-            this.lblDEscripcion.Click += new System.EventHandler(this.lblDEscripcion_Click);
+            this.lblDEscripcion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(62, 264);
+            this.lblMarca.Location = new System.Drawing.Point(28, 23);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(0, 18);
             this.lblMarca.TabIndex = 12;
@@ -180,38 +135,84 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(62, 332);
+            this.lblCategoria.Location = new System.Drawing.Point(28, 23);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(0, 18);
             this.lblCategoria.TabIndex = 13;
             // 
             // ptbImagen
             // 
-            this.ptbImagen.Location = new System.Drawing.Point(260, 94);
+            this.ptbImagen.Location = new System.Drawing.Point(307, 94);
             this.ptbImagen.Name = "ptbImagen";
             this.ptbImagen.Size = new System.Drawing.Size(315, 203);
             this.ptbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbImagen.TabIndex = 14;
             this.ptbImagen.TabStop = false;
             // 
+            // gpbCodigo
+            // 
+            this.gpbCodigo.Controls.Add(this.lblCodigo);
+            this.gpbCodigo.Font = new System.Drawing.Font("Kristen ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbCodigo.Location = new System.Drawing.Point(27, 94);
+            this.gpbCodigo.Name = "gpbCodigo";
+            this.gpbCodigo.Size = new System.Drawing.Size(200, 60);
+            this.gpbCodigo.TabIndex = 15;
+            this.gpbCodigo.TabStop = false;
+            this.gpbCodigo.Text = " Codigo ";
+            // 
+            // gpbNombre
+            // 
+            this.gpbNombre.Controls.Add(this.lblNombre);
+            this.gpbNombre.Location = new System.Drawing.Point(27, 173);
+            this.gpbNombre.Name = "gpbNombre";
+            this.gpbNombre.Size = new System.Drawing.Size(200, 60);
+            this.gpbNombre.TabIndex = 16;
+            this.gpbNombre.TabStop = false;
+            this.gpbNombre.Text = " Nombre ";
+            // 
+            // gpbMarca
+            // 
+            this.gpbMarca.Controls.Add(this.lblMarca);
+            this.gpbMarca.Location = new System.Drawing.Point(27, 252);
+            this.gpbMarca.Name = "gpbMarca";
+            this.gpbMarca.Size = new System.Drawing.Size(200, 60);
+            this.gpbMarca.TabIndex = 17;
+            this.gpbMarca.TabStop = false;
+            this.gpbMarca.Text = " Marca ";
+            // 
+            // gpbCategoria
+            // 
+            this.gpbCategoria.Controls.Add(this.lblCategoria);
+            this.gpbCategoria.Location = new System.Drawing.Point(27, 331);
+            this.gpbCategoria.Name = "gpbCategoria";
+            this.gpbCategoria.Size = new System.Drawing.Size(200, 60);
+            this.gpbCategoria.TabIndex = 18;
+            this.gpbCategoria.TabStop = false;
+            this.gpbCategoria.Text = " Categoria ";
+            // 
+            // gpbDescripcion
+            // 
+            this.gpbDescripcion.Controls.Add(this.lblDEscripcion);
+            this.gpbDescripcion.Location = new System.Drawing.Point(260, 379);
+            this.gpbDescripcion.Name = "gpbDescripcion";
+            this.gpbDescripcion.Size = new System.Drawing.Size(408, 147);
+            this.gpbDescripcion.TabIndex = 19;
+            this.gpbDescripcion.TabStop = false;
+            this.gpbDescripcion.Text = " Descripcion";
+            // 
             // VentanaDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(701, 525);
+            this.ClientSize = new System.Drawing.Size(701, 551);
+            this.Controls.Add(this.gpbDescripcion);
+            this.Controls.Add(this.gpbCategoria);
+            this.Controls.Add(this.gpbMarca);
+            this.Controls.Add(this.gpbNombre);
+            this.Controls.Add(this.gpbCodigo);
             this.Controls.Add(this.ptbImagen);
-            this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.lblMarca);
-            this.Controls.Add(this.lblDEscripcion);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.lblEtiquetaCategoria);
-            this.Controls.Add(this.lblEtiquetaMarca);
-            this.Controls.Add(this.lblEtiquetaDescripcion);
-            this.Controls.Add(this.lblEtiquetaNombre);
-            this.Controls.Add(this.lblEtiquetaCodigo);
             this.Controls.Add(this.lblEtiquetaTitulo);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnVolver);
@@ -223,6 +224,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.VentanaDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).EndInit();
+            this.gpbCodigo.ResumeLayout(false);
+            this.gpbCodigo.PerformLayout();
+            this.gpbNombre.ResumeLayout(false);
+            this.gpbNombre.PerformLayout();
+            this.gpbMarca.ResumeLayout(false);
+            this.gpbMarca.PerformLayout();
+            this.gpbCategoria.ResumeLayout(false);
+            this.gpbCategoria.PerformLayout();
+            this.gpbDescripcion.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,11 +243,6 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label lblEtiquetaTitulo;
-        private System.Windows.Forms.Label lblEtiquetaCodigo;
-        private System.Windows.Forms.Label lblEtiquetaNombre;
-        private System.Windows.Forms.Label lblEtiquetaDescripcion;
-        private System.Windows.Forms.Label lblEtiquetaMarca;
-        private System.Windows.Forms.Label lblEtiquetaCategoria;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
@@ -245,5 +250,10 @@
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.PictureBox ptbImagen;
+        private System.Windows.Forms.GroupBox gpbCodigo;
+        private System.Windows.Forms.GroupBox gpbNombre;
+        private System.Windows.Forms.GroupBox gpbMarca;
+        private System.Windows.Forms.GroupBox gpbCategoria;
+        private System.Windows.Forms.GroupBox gpbDescripcion;
     }
 }

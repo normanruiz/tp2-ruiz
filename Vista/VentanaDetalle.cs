@@ -13,11 +13,29 @@ namespace Vista
 {
     public partial class VentanaDetalle : Form
     {
-        public VentanaDetalle(Articulo articuloAux)
+        Articulo articuloSeleccionado;
+        public VentanaDetalle(Articulo articulo)
         {
             InitializeComponent();
+            articuloSeleccionado = new Articulo();
+            articuloSeleccionado = articulo;
         }
 
+        public void CargarArticulo()
+        {
+            lblCodigo.Text = articuloSeleccionado.Codigo;
+            lblNombre.Text = articuloSeleccionado.Nombre;
+            lblMarca.Text = articuloSeleccionado.marca.Descripcion;
+            lblCategoria.Text = articuloSeleccionado.categoria.Descripcion;
+            lblDEscripcion.Text = articuloSeleccionado.Descripcion;
+            lblPrecio.Text = "$ " + articuloSeleccionado.Precio;
+            ptbImagen.Load(articuloSeleccionado.Imagen);
+        }
+
+        private void VentanaDetalle_Load(object sender, EventArgs e)
+        {
+            CargarArticulo();
+        }
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,24 +43,21 @@ namespace Vista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Articulo articulo = new Articulo();
+            
+            VentanaNuevoModificar ventanaModificar;
+            try
             {
-                //TODO: Obtener datos del detalle del articulo a modificar
+                ventanaModificar = new VentanaNuevoModificar(articuloSeleccionado);
+                ventanaModificar.ShowDialog();
+                CargarArticulo();
             }
-            VentanaNuevoModificar ventanaModificar = new VentanaNuevoModificar(articulo);
-            ventanaModificar.ShowDialog();
-            // TODO: Agregar metodo para recargar la ventana detalle
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
-        private void VentanaDetalle_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void lblDEscripcion_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

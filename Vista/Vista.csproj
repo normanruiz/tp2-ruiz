@@ -102,6 +102,10 @@
     <None Include="img\btnEliminar.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Controlador\Controlador.csproj">
+      <Project>{1ACE3677-92BA-41C6-B4CF-E7538F1DC13B}</Project>
+      <Name>Controlador</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{F486F8BB-106E-4E02-AA8D-12A8125F9107}</Project>
       <Name>Modelo</Name>

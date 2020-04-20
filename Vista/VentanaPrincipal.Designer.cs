@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaPrincipal));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgbCatalogo = new System.Windows.Forms.DataGridView();
-            this.txbCodigo = new System.Windows.Forms.TextBox();
+            this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
             this.tbxDescripcion = new System.Windows.Forms.TextBox();
             this.cbxMarca = new System.Windows.Forms.ComboBox();
@@ -42,6 +42,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.ckbFiltros = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgbCatalogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -61,29 +62,31 @@
             // 
             this.dgbCatalogo.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgbCatalogo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbCatalogo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgbCatalogo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dgbCatalogo.Location = new System.Drawing.Point(104, 164);
+            this.dgbCatalogo.MultiSelect = false;
             this.dgbCatalogo.Name = "dgbCatalogo";
             this.dgbCatalogo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgbCatalogo.Size = new System.Drawing.Size(856, 380);
             this.dgbCatalogo.TabIndex = 9;
             // 
-            // txbCodigo
+            // tbxCodigo
             // 
-            this.txbCodigo.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.txbCodigo.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCodigo.ForeColor = System.Drawing.SystemColors.Info;
-            this.txbCodigo.Location = new System.Drawing.Point(104, 127);
-            this.txbCodigo.Name = "txbCodigo";
-            this.txbCodigo.Size = new System.Drawing.Size(126, 24);
-            this.txbCodigo.TabIndex = 4;
+            this.tbxCodigo.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbxCodigo.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxCodigo.ForeColor = System.Drawing.SystemColors.Info;
+            this.tbxCodigo.Location = new System.Drawing.Point(104, 127);
+            this.tbxCodigo.Name = "tbxCodigo";
+            this.tbxCodigo.Size = new System.Drawing.Size(126, 24);
+            this.tbxCodigo.TabIndex = 4;
             // 
             // tbxNombre
             // 
             this.tbxNombre.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tbxNombre.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNombre.ForeColor = System.Drawing.SystemColors.Info;
-            this.tbxNombre.Location = new System.Drawing.Point(286, 127);
+            this.tbxNombre.Location = new System.Drawing.Point(271, 127);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(126, 24);
             this.tbxNombre.TabIndex = 5;
@@ -93,7 +96,7 @@
             this.tbxDescripcion.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tbxDescripcion.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxDescripcion.ForeColor = System.Drawing.SystemColors.Info;
-            this.tbxDescripcion.Location = new System.Drawing.Point(468, 127);
+            this.tbxDescripcion.Location = new System.Drawing.Point(438, 127);
             this.tbxDescripcion.Name = "tbxDescripcion";
             this.tbxDescripcion.Size = new System.Drawing.Size(126, 24);
             this.tbxDescripcion.TabIndex = 6;
@@ -104,7 +107,7 @@
             this.cbxMarca.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMarca.ForeColor = System.Drawing.SystemColors.Info;
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(650, 127);
+            this.cbxMarca.Location = new System.Drawing.Point(605, 127);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(126, 25);
             this.cbxMarca.TabIndex = 7;
@@ -115,7 +118,7 @@
             this.cbxCategoria.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoria.ForeColor = System.Drawing.SystemColors.Info;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(832, 127);
+            this.cbxCategoria.Location = new System.Drawing.Point(772, 127);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(126, 25);
             this.cbxCategoria.TabIndex = 8;
@@ -181,12 +184,24 @@
             // 
             this.btnSalir.BackgroundImage = global::Vista.Properties.Resources.btnSalirVolver;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.Location = new System.Drawing.Point(896, 38);
+            this.btnSalir.Location = new System.Drawing.Point(896, 25);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(60, 60);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // ckbFiltros
+            // 
+            this.ckbFiltros.AutoSize = true;
+            this.ckbFiltros.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ckbFiltros.Location = new System.Drawing.Point(939, 131);
+            this.ckbFiltros.Name = "ckbFiltros";
+            this.ckbFiltros.Size = new System.Drawing.Size(15, 14);
+            this.ckbFiltros.TabIndex = 13;
+            this.ckbFiltros.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ckbFiltros.UseVisualStyleBackColor = true;
+            this.ckbFiltros.CheckedChanged += new System.EventHandler(this.ckbFiltros_CheckedChanged);
             // 
             // VentanaPrincipal
             // 
@@ -194,6 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.ckbFiltros);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEleminar);
@@ -203,7 +219,7 @@
             this.Controls.Add(this.cbxMarca);
             this.Controls.Add(this.tbxDescripcion);
             this.Controls.Add(this.tbxNombre);
-            this.Controls.Add(this.txbCodigo);
+            this.Controls.Add(this.tbxCodigo);
             this.Controls.Add(this.dgbCatalogo);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnSalir);
@@ -226,7 +242,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dgbCatalogo;
-        private System.Windows.Forms.TextBox txbCodigo;
+        private System.Windows.Forms.TextBox tbxCodigo;
         private System.Windows.Forms.TextBox tbxNombre;
         private System.Windows.Forms.TextBox tbxDescripcion;
         private System.Windows.Forms.ComboBox cbxMarca;
@@ -236,5 +252,6 @@
         private System.Windows.Forms.Button btnEleminar;
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.PictureBox pbxLogo;
+        private System.Windows.Forms.CheckBox ckbFiltros;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Modelo;
+﻿using Controlador;
+using Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,14 @@ namespace Vista
 
         private void VentanaPrincipal_Load(object sender, EventArgs e)
         {
-            Cargar();
+            CargarArticulos();
+            CargarMarcas();
+            CargarCategorias();
+            tbxCodigo.Enabled = false;
+            tbxNombre.Enabled = false;
+            tbxDescripcion.Enabled = false;
+            cbxMarca.Enabled = false;
+            cbxCategoria.Enabled = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -30,36 +38,119 @@ namespace Vista
 
         private void btnDetalle_Click(object sender, EventArgs e)
         {
-            Articulo articuloSeleccionado = new Articulo();
+            Articulo articuloSeleccionado;
+            VentanaDetalle ventanaDetalle;
+            try
             {
-                //TODO: Obtener datos del dgb del articulo a modificar
+                articuloSeleccionado = new Articulo();
+                articuloSeleccionado = (Articulo)dgbCatalogo.CurrentRow.DataBoundItem;
+                ventanaDetalle = new VentanaDetalle(articuloSeleccionado);
+                ventanaDetalle.ShowDialog();
+                CargarArticulos();
+
             }
-            VentanaDetalle ventanaDetalle = new VentanaDetalle(articuloSeleccionado);
-            ventanaDetalle.ShowDialog();
-            Cargar();
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        public void Cargar()
+        public void CargarArticulos()
         {
-            //TODO: Metodo Cargar()
+            ControladorArticulo controladorArticulo;
+            try
+            {
+                controladorArticulo = new ControladorArticulo();
+                dgbCatalogo.DataSource = controladorArticulo.Listar();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public void CargarMarcas()
+        {
+            ControladorMarca controladorMarca;
+            try
+            {
+                controladorMarca = new ControladorMarca();
+                cbxMarca.DataSource = controladorMarca.Listar();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        public void CargarCategorias()
+        {
+            ControladorCategoria controladorCategoria;
+            try
+            {
+                controladorCategoria = new ControladorCategoria();
+                cbxCategoria.DataSource = controladorCategoria.Listar();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            VentanaNuevoModificar ventanaNuevo = new VentanaNuevoModificar();
-            ventanaNuevo.ShowDialog();
-            Cargar();
+            VentanaNuevoModificar ventanaNuevo;
+            try
+            {
+                ventanaNuevo = new VentanaNuevoModificar();
+                ventanaNuevo.ShowDialog();
+                CargarArticulos();
+                CargarMarcas();
+                CargarCategorias();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Articulo articuloSeleccionado = new Articulo();
+            Articulo articuloSeleccionado;
+            VentanaNuevoModificar ventanaModificar;
+            try
             {
-                //TODO: Obtener datos del dgb del articulo a modificar
+                articuloSeleccionado = new Articulo();
+                articuloSeleccionado = (Articulo)dgbCatalogo.CurrentRow.DataBoundItem;
+                ventanaModificar = new VentanaNuevoModificar(articuloSeleccionado);
+                ventanaModificar.ShowDialog();
+                CargarArticulos();
             }
-            VentanaNuevoModificar ventanaModificar = new VentanaNuevoModificar(articuloSeleccionado);
-            ventanaModificar.ShowDialog();
-            Cargar();
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ckbFiltros_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbFiltros.Checked)
+            {
+                tbxCodigo.Enabled = true;
+                tbxNombre.Enabled = true;
+                tbxDescripcion.Enabled = true;
+                cbxMarca.Enabled = true;
+                cbxCategoria.Enabled = true;
+            }
+            else
+            {
+                tbxCodigo.Enabled = false;
+                tbxNombre.Enabled = false;
+                tbxDescripcion.Enabled = false;
+                cbxMarca.Enabled = false;
+                cbxCategoria.Enabled = false;
+            }
+            CargarArticulos();
+
         }
     }
 }

@@ -62,6 +62,7 @@ namespace Vista
             {
                 controladorArticulo = new ControladorArticulo();
                 dgbCatalogo.DataSource = controladorArticulo.Listar();
+                dgbCatalogo.Columns[8].Visible = false;
             }
             catch (Exception excepcion)
             {
@@ -151,6 +152,24 @@ namespace Vista
             }
             CargarArticulos();
 
+        }
+
+        private void btnEleminar_Click(object sender, EventArgs e)
+        {
+            Articulo articuloSeleccionado;
+            ControladorArticulo controladorArticulo;
+            try
+            {
+                articuloSeleccionado = new Articulo();
+                articuloSeleccionado = (Articulo)dgbCatalogo.CurrentRow.DataBoundItem;
+                controladorArticulo = new ControladorArticulo();
+                controladorArticulo.EliminarLogico(articuloSeleccionado);
+                CargarArticulos();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

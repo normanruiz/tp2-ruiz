@@ -16,6 +16,6 @@ namespace Modelo
         public Categoria categoria { get; set; }
         public String Imagen { get; set; }
         public decimal Precio { get; set; }
-        //public Boolean Estado { get; set; }
+        public Boolean Estado { get; set; }
     }
 }

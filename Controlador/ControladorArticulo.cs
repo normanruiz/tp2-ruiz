@@ -20,7 +20,7 @@ namespace Controlador
                 listadoArticulo = new List<Articulo>();
                 conexion = new AccesoDatos();
                 conexion.Conectar();
-                conexion.EjecutarConsulta("select a.Id, a.Codigo, a.Nombre, a.Descripcion, a.IdMarca, m.Descripcion, a.IdCategoria, c.Descripcion, a.ImagenUrl, a.Precio from ARTICULOS a left join MARCAS m on a.IdMarca = m.Id left join CATEGORIAS c on a.IdCategoria = c.Id");
+                conexion.EjecutarConsulta("select a.Id, a.Codigo, a.Nombre, a.Descripcion, a.IdMarca, m.Descripcion, a.IdCategoria, c.Descripcion, a.ImagenUrl, a.Precio, a.Estado from ARTICULOS a left join MARCAS m on a.IdMarca = m.Id left join CATEGORIAS c on a.IdCategoria = c.Id where a.Estado = 1");
                 while (conexion.lector.Read())
                 {
                     articulo = new Articulo();
@@ -30,6 +30,7 @@ namespace Controlador
                     articulo.Descripcion = conexion.lector.GetString(3);
                     articulo.Imagen = conexion.lector.GetString(8);
                     articulo.Precio = conexion.lector.GetDecimal(9);
+                    articulo.Estado = conexion.lector.GetBoolean(10);
 
                     articulo.marca = new Marca();
                     articulo.marca.Id = conexion.lector.GetInt32(4);
@@ -75,7 +76,7 @@ namespace Controlador
                 conexion.AgregarParametro("@urlImagen", articulo.Imagen);
                 conexion.AgregarParametro("@Precio", articulo.Precio.ToString());
 
-                conexion.EjecutarAccion("insert into ARTICULOS values (@Codigo, @Nombre, @Descripcion, @idMarca, @idCategoria, @urlImagen, @Precio)");
+                conexion.EjecutarAccion("insert into ARTICULOS values (@Codigo, @Nombre, @Descripcion, @idMarca, @idCategoria, @urlImagen, @Precio, 1)");
             }
             catch (Exception excepcion)
             {
@@ -125,5 +126,30 @@ namespace Controlador
 
         }
 
+        public void EliminarLogico(Articulo articulo)
+        {
+            AccesoDatos conexion = null;
+            try
+            {
+                conexion = new AccesoDatos();
+                conexion.Conectar();
+                conexion.LimpiarParametro();
+                conexion.AgregarParametro("@Id", articulo.Id.ToString());
+
+                conexion.EjecutarAccion("update ARTICULOS set Estado = 0 where Id = @Id");
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Desconectar();
+                }
+            }
+
+        }
     }
 }

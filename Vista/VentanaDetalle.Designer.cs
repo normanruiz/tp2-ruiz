@@ -57,7 +57,7 @@
             this.btnVolver.BackgroundImage = global::Vista.Properties.Resources.btnSalirVolver;
             this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnVolver.Location = new System.Drawing.Point(599, 19);
+            this.btnVolver.Location = new System.Drawing.Point(604, 17);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(60, 60);
             this.btnVolver.TabIndex = 0;
@@ -69,7 +69,7 @@
             this.btnModificar.BackgroundImage = global::Vista.Properties.Resources.btnModificar;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnModificar.Location = new System.Drawing.Point(97, 422);
+            this.btnModificar.Location = new System.Drawing.Point(102, 420);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(60, 60);
             this.btnModificar.TabIndex = 1;
@@ -80,7 +80,7 @@
             // 
             this.lblEtiquetaTitulo.AutoSize = true;
             this.lblEtiquetaTitulo.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtiquetaTitulo.Location = new System.Drawing.Point(42, 32);
+            this.lblEtiquetaTitulo.Location = new System.Drawing.Point(47, 30);
             this.lblEtiquetaTitulo.Name = "lblEtiquetaTitulo";
             this.lblEtiquetaTitulo.Size = new System.Drawing.Size(211, 29);
             this.lblEtiquetaTitulo.TabIndex = 2;
@@ -89,7 +89,7 @@
             // lblPrecio
             // 
             this.lblPrecio.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(307, 316);
+            this.lblPrecio.Location = new System.Drawing.Point(312, 314);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(315, 23);
             this.lblPrecio.TabIndex = 8;
@@ -142,7 +142,7 @@
             // 
             // ptbImagen
             // 
-            this.ptbImagen.Location = new System.Drawing.Point(307, 94);
+            this.ptbImagen.Location = new System.Drawing.Point(312, 92);
             this.ptbImagen.Name = "ptbImagen";
             this.ptbImagen.Size = new System.Drawing.Size(315, 203);
             this.ptbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +153,7 @@
             // 
             this.gpbCodigo.Controls.Add(this.lblCodigo);
             this.gpbCodigo.Font = new System.Drawing.Font("Kristen ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbCodigo.Location = new System.Drawing.Point(27, 94);
+            this.gpbCodigo.Location = new System.Drawing.Point(32, 92);
             this.gpbCodigo.Name = "gpbCodigo";
             this.gpbCodigo.Size = new System.Drawing.Size(200, 60);
             this.gpbCodigo.TabIndex = 15;
@@ -163,7 +163,7 @@
             // gpbNombre
             // 
             this.gpbNombre.Controls.Add(this.lblNombre);
-            this.gpbNombre.Location = new System.Drawing.Point(27, 173);
+            this.gpbNombre.Location = new System.Drawing.Point(32, 171);
             this.gpbNombre.Name = "gpbNombre";
             this.gpbNombre.Size = new System.Drawing.Size(200, 60);
             this.gpbNombre.TabIndex = 16;
@@ -173,7 +173,7 @@
             // gpbMarca
             // 
             this.gpbMarca.Controls.Add(this.lblMarca);
-            this.gpbMarca.Location = new System.Drawing.Point(27, 252);
+            this.gpbMarca.Location = new System.Drawing.Point(32, 250);
             this.gpbMarca.Name = "gpbMarca";
             this.gpbMarca.Size = new System.Drawing.Size(200, 60);
             this.gpbMarca.TabIndex = 17;
@@ -183,7 +183,7 @@
             // gpbCategoria
             // 
             this.gpbCategoria.Controls.Add(this.lblCategoria);
-            this.gpbCategoria.Location = new System.Drawing.Point(27, 331);
+            this.gpbCategoria.Location = new System.Drawing.Point(32, 329);
             this.gpbCategoria.Name = "gpbCategoria";
             this.gpbCategoria.Size = new System.Drawing.Size(200, 60);
             this.gpbCategoria.TabIndex = 18;
@@ -193,7 +193,7 @@
             // gpbDescripcion
             // 
             this.gpbDescripcion.Controls.Add(this.lblDEscripcion);
-            this.gpbDescripcion.Location = new System.Drawing.Point(260, 379);
+            this.gpbDescripcion.Location = new System.Drawing.Point(265, 377);
             this.gpbDescripcion.Name = "gpbDescripcion";
             this.gpbDescripcion.Size = new System.Drawing.Size(408, 147);
             this.gpbDescripcion.TabIndex = 19;
@@ -205,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(701, 551);
+            this.ClientSize = new System.Drawing.Size(704, 541);
             this.Controls.Add(this.gpbDescripcion);
             this.Controls.Add(this.gpbCategoria);
             this.Controls.Add(this.gpbMarca);
@@ -219,7 +219,9 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(720, 580);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(720, 580);
             this.Name = "VentanaDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.VentanaDetalle_Load);

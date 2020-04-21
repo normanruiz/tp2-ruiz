@@ -44,5 +44,55 @@ namespace Controlador
                 }
             }
         }
+
+        public void AgregarNuevo(Categoria categoria)
+        {
+            AccesoDatos conexion = null;
+            try
+            {
+                conexion = new AccesoDatos();
+                conexion.Conectar();
+                conexion.LimpiarParametro();
+                conexion.AgregarParametro("@Descripcion", categoria.Descripcion);
+                conexion.EjecutarAccion("insert into CATEGORIAS values (@Descripcion)");
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Desconectar();
+                }
+            }
+        }
+
+        public void EliminarFisico(Categoria categoria)
+        {
+            AccesoDatos conexion = null;
+            try
+            {
+                conexion = new AccesoDatos();
+                conexion.Conectar();
+                conexion.LimpiarParametro();
+                conexion.AgregarParametro("@Id", categoria.Id.ToString());
+
+                conexion.EjecutarAccion("delete from CATEGORIAS where Id = @Id");
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Desconectar();
+                }
+            }
+
+        }
     }
 }

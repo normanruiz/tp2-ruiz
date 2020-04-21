@@ -40,54 +40,68 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(24, 28);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(221, 23);
             this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(173, 77);
+            this.btnAgregar.BackgroundImage = global::Vista.Properties.Resources.btnAceptar;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar.Location = new System.Drawing.Point(198, 71);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(40, 40);
             this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // tbxAgregar
             // 
             this.tbxAgregar.Font = new System.Drawing.Font("Kristen ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxAgregar.Location = new System.Drawing.Point(20, 77);
+            this.tbxAgregar.Location = new System.Drawing.Point(31, 81);
             this.tbxAgregar.Name = "tbxAgregar";
             this.tbxAgregar.Size = new System.Drawing.Size(147, 22);
             this.tbxAgregar.TabIndex = 2;
+            this.tbxAgregar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxAgregar_KeyPress);
+            this.tbxAgregar.Validating += new System.ComponentModel.CancelEventHandler(this.tbxAgregar_Validating);
             // 
             // dgvABMMC
             // 
-            this.dgvABMMC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvABMMC.Location = new System.Drawing.Point(42, 109);
+            this.dgvABMMC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvABMMC.ColumnHeadersHeight = 26;
+            this.dgvABMMC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvABMMC.Location = new System.Drawing.Point(42, 125);
             this.dgvABMMC.Name = "dgvABMMC";
+            this.dgvABMMC.RowHeadersWidth = 26;
+            this.dgvABMMC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvABMMC.Size = new System.Drawing.Size(185, 212);
             this.dgvABMMC.TabIndex = 3;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(97, 331);
+            this.btnEliminar.BackgroundImage = global::Vista.Properties.Resources.btnEliminar;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.Location = new System.Drawing.Point(69, 347);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(40, 40);
             this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(97, 360);
+            this.btnVolver.BackgroundImage = global::Vista.Properties.Resources.btnSalirVolver;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolver.Location = new System.Drawing.Point(159, 347);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.Size = new System.Drawing.Size(40, 40);
             this.btnVolver.TabIndex = 5;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // VentanaABMMC
             // 
@@ -106,6 +120,7 @@
             this.MinimumSize = new System.Drawing.Size(284, 440);
             this.Name = "VentanaABMMC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.VentanaABMMC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvABMMC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

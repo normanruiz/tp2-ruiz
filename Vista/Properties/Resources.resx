@@ -121,14 +121,17 @@
   <data name="btnNuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\btnNuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btnDetalle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\btnDetalle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\btnEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnAceptar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\btnAceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnModificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\btnModificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnCargarImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\btnCargarImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnSalirVolver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\btnSalirVolver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,10 +139,10 @@
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnDetalle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\btnDetalle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnModificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\btnModificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnCargarImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\btnCargarImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnMas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\btnMas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

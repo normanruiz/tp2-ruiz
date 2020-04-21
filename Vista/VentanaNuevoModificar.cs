@@ -260,5 +260,35 @@ namespace Vista
         {
             tbxDescripcion.BackColor = System.Drawing.SystemColors.Window;
         }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            VentanaABMMC ventanaABMMC;
+            try
+            {
+                ventanaABMMC = new VentanaABMMC("marca");
+                ventanaABMMC.ShowDialog();
+                CargarMarcas();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            VentanaABMMC ventanaABMMC;
+            try
+            {
+                ventanaABMMC = new VentanaABMMC("categoria");
+                ventanaABMMC.ShowDialog();
+                CargarCategorias();
+            }
+            catch (Exception excepcion)
+            {
+                MessageBox.Show(excepcion.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

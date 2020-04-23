@@ -59,6 +59,75 @@ namespace Controlador
 
         }
 
+        public List<Articulo> ListarFiltrado(String[] listaArgs)
+        {
+            List<Articulo> listadoArticulo;
+            Articulo articulo;
+            AccesoDatos conexion = null;
+            String cadena = "select a.Id, a.Codigo, a.Nombre, a.Descripcion, a.IdMarca, m.Descripcion, a.IdCategoria, c.Descripcion, a.ImagenUrl, a.Precio, a.Estado from ARTICULOS a left join MARCAS m on a.IdMarca = m.Id left join CATEGORIAS c on a.IdCategoria = c.Id where a.Estado = 1";
+            try
+            {
+                if(listaArgs[0] != "Filtrar por Codigo...")
+                {
+                    cadena += " and a.Codigo like '" + listaArgs[0] + "%'"; 
+                }
+                if (listaArgs[1] != "Filtrar por Nombre...")
+                {
+                    cadena += " and a.Nombre like '" + listaArgs[1] + "%'";
+                }
+                if (listaArgs[2].Length != 0)
+                {
+                    cadena += " and a.IdMarca = " + listaArgs[2];
+                }
+                if (listaArgs[3].Length != 0)
+                {
+                    cadena += " and a.IdCategoria = " + listaArgs[3];
+                }
+
+                listadoArticulo = new List<Articulo>();
+                conexion = new AccesoDatos();
+
+                conexion.Conectar();
+
+                conexion.EjecutarConsulta(cadena);
+                while (conexion.lector.Read())
+                {
+                    articulo = new Articulo();
+                    articulo.Id = conexion.lector.GetInt32(0);
+                    articulo.Codigo = conexion.lector.GetString(1);
+                    articulo.Nombre = conexion.lector.GetString(2);
+                    articulo.Descripcion = conexion.lector.GetString(3);
+                    articulo.Imagen = conexion.lector.GetString(8);
+                    articulo.Precio = conexion.lector.GetDecimal(9);
+                    articulo.Estado = conexion.lector.GetBoolean(10);
+
+                    articulo.marca = new Marca();
+                    articulo.marca.Id = conexion.lector.GetInt32(4);
+                    articulo.marca.Descripcion = conexion.lector.GetString(5);
+
+                    articulo.categoria = new Categoria();
+                    articulo.categoria.Id = conexion.lector.GetInt32(6);
+                    articulo.categoria.Descripcion = conexion.lector.GetString(7);
+
+                    listadoArticulo.Add(articulo);
+                }
+
+                return listadoArticulo;
+            }
+            catch (Exception excepcion)
+            {
+                throw excepcion;
+            }
+            finally
+            {
+                if (conexion != null)
+                {
+                    conexion.Desconectar();
+                }
+            }
+
+        }
+
         public void AgregarNuevo(Articulo articulo)
         {
             AccesoDatos conexion = null;

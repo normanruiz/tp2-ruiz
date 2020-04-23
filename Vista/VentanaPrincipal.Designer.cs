@@ -33,7 +33,6 @@
             this.dgbCatalogo = new System.Windows.Forms.DataGridView();
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
-            this.tbxDescripcion = new System.Windows.Forms.TextBox();
             this.cbxMarca = new System.Windows.Forms.ComboBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
@@ -73,55 +72,59 @@
             // 
             // tbxCodigo
             // 
-            this.tbxCodigo.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbxCodigo.BackColor = System.Drawing.SystemColors.GrayText;
             this.tbxCodigo.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxCodigo.ForeColor = System.Drawing.SystemColors.Info;
+            this.tbxCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbxCodigo.Location = new System.Drawing.Point(104, 127);
             this.tbxCodigo.Name = "tbxCodigo";
-            this.tbxCodigo.Size = new System.Drawing.Size(126, 24);
+            this.tbxCodigo.Size = new System.Drawing.Size(187, 24);
             this.tbxCodigo.TabIndex = 4;
+            this.tbxCodigo.Text = "Filtrar por Codigo...";
+            this.tbxCodigo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbxCodigo_MouseClick);
+            this.tbxCodigo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbxCodigo_KeyUp);
+            this.tbxCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.tbxCodigo_Validating);
             // 
             // tbxNombre
             // 
-            this.tbxNombre.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbxNombre.BackColor = System.Drawing.SystemColors.GrayText;
             this.tbxNombre.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxNombre.ForeColor = System.Drawing.SystemColors.Info;
-            this.tbxNombre.Location = new System.Drawing.Point(271, 127);
+            this.tbxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbxNombre.Location = new System.Drawing.Point(314, 127);
             this.tbxNombre.Name = "tbxNombre";
-            this.tbxNombre.Size = new System.Drawing.Size(126, 24);
+            this.tbxNombre.Size = new System.Drawing.Size(187, 24);
             this.tbxNombre.TabIndex = 5;
-            // 
-            // tbxDescripcion
-            // 
-            this.tbxDescripcion.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbxDescripcion.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDescripcion.ForeColor = System.Drawing.SystemColors.Info;
-            this.tbxDescripcion.Location = new System.Drawing.Point(438, 127);
-            this.tbxDescripcion.Name = "tbxDescripcion";
-            this.tbxDescripcion.Size = new System.Drawing.Size(126, 24);
-            this.tbxDescripcion.TabIndex = 6;
+            this.tbxNombre.Text = "Filtrar por Nombre...";
+            this.tbxNombre.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbxNombre_MouseClick);
+            this.tbxNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbxNombre_KeyUp);
+            this.tbxNombre.Validating += new System.ComponentModel.CancelEventHandler(this.tbxNombre_Validating);
             // 
             // cbxMarca
             // 
             this.cbxMarca.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.cbxMarca.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxMarca.ForeColor = System.Drawing.SystemColors.Info;
+            this.cbxMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(605, 127);
+            this.cbxMarca.Location = new System.Drawing.Point(524, 126);
             this.cbxMarca.Name = "cbxMarca";
-            this.cbxMarca.Size = new System.Drawing.Size(126, 25);
+            this.cbxMarca.Size = new System.Drawing.Size(187, 25);
             this.cbxMarca.TabIndex = 7;
+            this.cbxMarca.Text = "Filtrar por Marca...";
+            this.cbxMarca.SelectionChangeCommitted += new System.EventHandler(this.cbxMarca_SelectionChangeCommitted);
+            this.cbxMarca.Validating += new System.ComponentModel.CancelEventHandler(this.cbxMarca_Validating);
             // 
             // cbxCategoria
             // 
             this.cbxCategoria.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.cbxCategoria.Font = new System.Drawing.Font("Kristen ITC", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxCategoria.ForeColor = System.Drawing.SystemColors.Info;
+            this.cbxCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(772, 127);
+            this.cbxCategoria.Location = new System.Drawing.Point(734, 126);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(126, 25);
+            this.cbxCategoria.Size = new System.Drawing.Size(187, 25);
             this.cbxCategoria.TabIndex = 8;
+            this.cbxCategoria.Text = "Filtrar por Categoria...";
+            this.cbxCategoria.SelectionChangeCommitted += new System.EventHandler(this.cbxCategoria_SelectionChangeCommitted);
+            this.cbxCategoria.Validating += new System.ComponentModel.CancelEventHandler(this.cbxCategoria_Validating);
             // 
             // pbxLogo
             // 
@@ -218,7 +221,6 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.cbxMarca);
-            this.Controls.Add(this.tbxDescripcion);
             this.Controls.Add(this.tbxNombre);
             this.Controls.Add(this.tbxCodigo);
             this.Controls.Add(this.dgbCatalogo);
@@ -247,7 +249,6 @@
         private System.Windows.Forms.DataGridView dgbCatalogo;
         private System.Windows.Forms.TextBox tbxCodigo;
         private System.Windows.Forms.TextBox tbxNombre;
-        private System.Windows.Forms.TextBox tbxDescripcion;
         private System.Windows.Forms.ComboBox cbxMarca;
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.Button btnNuevo;
